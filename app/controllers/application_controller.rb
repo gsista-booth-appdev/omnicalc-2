@@ -14,6 +14,14 @@ class ApplicationController < ActionController::Base
     render({ :template => "calculator/subtract.html.erb" })
   end
 
+  def wizard_subtract
+    @first_num = params.fetch("first_num").to_f
+    @second_num = params.fetch("second_num").to_f
+    @result = @second_num - @first_num
+
+    render({ :template => "calculator/wizard_subtract.html.erb" })
+  end
+
   def multiply
     render({ :template => "calculator/multiply.html.erb" })
   end

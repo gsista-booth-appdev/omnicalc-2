@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get("/subtract", { :controller => "application", :action => "subtract" })
 
+  get("/wizard_subtract", { :controller => "application", :action => "wizard_subtract" })
+
   get("/multiply", { :controller => "application", :action => "multiply" })
 
   get("/divide", { :controller => "application", :action => "divide" })
